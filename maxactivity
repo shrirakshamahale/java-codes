@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[][] activity={{12,25},{10,20},{20,30}};
+        System.out.println("max count of activities:"+maxActivities(activity));
+    }
+
+    public static int maxActivities(int[][] activity){
+        Arrays.sort(activity,(a,b)->Integer.compare(a[1],b[1]));
+        System.out.println(Arrays.deepToString(activity));
+
+        int count=1;
+        int lastactivityeEndTime=activity[0][1];
+
+
+        for(int i=1;i<activity.length;i++){
+            if(lastactivityeEndTime<=activity[i][0]){
+                count++;
+                lastactivityeEndTime=activity[i][1];
+                System.out.println(Arrays.asList(
+    Arrays.toString(activity[0]),
+    Arrays.toString(activity[i])
+));
+
+                
+            }
+        }
+        return count;
+    }
+}
