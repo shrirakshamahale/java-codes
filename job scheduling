@@ -1,0 +1,78 @@
+import java.util.*;
+
+class Job {
+    int id, deadline, profit;
+
+    public Job(int id, int deadline, int profit) {
+        this.id = id;
+        this.deadline = deadline;
+        this.profit = profit;
+    }
+}
+
+class JobSequencing {
+    public static int[] JobSchedule(Job[] arr) {
+
+        // Sort jobs according to profit (descending)
+        Arrays.sort(arr, (a, b) -> b.profit - a.profit);
+
+        // Find maximum deadline
+        int maxDeadline = 0;
+        for (Job job : arr) {
+            maxDeadline = Math.max(maxDeadline, job.deadline);
+        }
+
+        // Create slots
+        Job[] slot = new Job[maxDeadline + 1];
+
+        int countJobs = 0;
+        int totalProfit = 0;
+
+        // Schedule jobs
+        for (Job job : arr) {
+            for (int j = job.deadline; j > 0; j--) {
+                if (slot[j] == null) {
+                    slot[j] = job;
+                    countJobs++;
+                    totalProfit += job.profit;
+                    break;
+                }
+            }
+        }
+
+        return new int[] { countJobs, totalProfit };
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = 7;
+
+        Job[] arr = new Job[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter job details " + (i + 1));
+
+            System.out.print("Enter id: ");
+            int id = sc.nextInt();
+
+            System.out.print("Enter deadline: ");
+            int deadline = sc.nextInt();
+
+            System.out.print("Enter profit: ");
+            int profit = sc.nextInt();
+
+            arr[i] = new Job(id, deadline, profit);
+        }
+
+        int[] ans = JobSequencing.JobSchedule(arr);
+
+        System.out.println("Jobs Done = " + ans[0]);
+        System.out.println("Maximum Profit = " + ans[1]);
+
+        sc.close();
+    }
+}
