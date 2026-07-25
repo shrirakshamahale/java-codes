@@ -1,0 +1,8 @@
+public class HelloWorldChallenge{
+    public static void main(String[] args){
+        System.out.println("Hello World!");
+        System.out.println("Prepinsta is Awesome");
+        System.out.println("Welcome to the Java Course");
+        System.out.println("If you want to learn java in depth, complete this playlist");
+    }
+}
