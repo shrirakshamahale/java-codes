@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class IntegerCheck {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a value: ");
+
+        if (sc.hasNextInt()) {
+            int a = sc.nextInt();
+            System.out.println("Number is an integer: " + a);
+        } else {
+            System.out.println("Number is not an integer.");
+        }
+
+        sc.close();
+    }
+}
