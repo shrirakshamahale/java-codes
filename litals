@@ -1,0 +1,8 @@
+public class litrals{
+    public static void main(String[] args){
+        byte age=34;
+        int a=12;
+        float f1=7.8f;
+        System.out.println(age);
+    }
+}
