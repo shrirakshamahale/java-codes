@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+
+public class percentage{
+    public static void main(String[] args) {
+        Scanner sc=new  Scanner(System.in);
+        System.out.println("enter the five numbers /marks");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int d=sc.nextInt();
+        int e=sc.nextInt();
+        int sum=a+b+c+d+e;
+        int total=500;
+        double percentage=(sum*100)/total;
+        double cgpa=percentage/9.5;
+        System.out.println("the percentage is "+percentage );
+        System.out.println("the percentage is "+cgpa);
+    }
+}
