@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class EncryptGrade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the grade: ");
+        char grade = sc.next().charAt(0);
+
+        // Encrypt by adding 8
+        char encrypted = (char)(grade + 8);
+        System.out.println("Encrypted grade: " + encrypted);
+
+        // Decrypt by subtracting 8
+        char decrypted = (char)(encrypted - 8);
+        System.out.println("Decrypted grade: " + decrypted);
+
+        sc.close();
+    }
+}
