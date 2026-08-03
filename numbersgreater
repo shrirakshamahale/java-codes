@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class CompareNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int givenNumber = 50;   // Given number
+
+        System.out.print("Enter a number: ");
+        int userNumber = sc.nextInt();
+
+        if (givenNumber > userNumber) {
+            System.out.println("The given number is greater than the user-entered number.");
+        } else if (givenNumber < userNumber) {
+            System.out.println("The given number is smaller than the user-entered number.");
+        } else {
+            System.out.println("Both numbers are equal.");
+        }
+
+        sc.close();
+    }
+}
