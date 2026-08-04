@@ -1,0 +1,33 @@
+import java.util.*;
+public class calculator {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        char op=sc.next().trim().charAt(0);
+        int result=0;
+        if(op=='+'||op=='-'||op=='*'||op=='/'||op=='%'){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            if(op=='+'){
+                result=a+b;
+            }
+            else if(op=='-'){
+                result=a-b;
+            }else if(op=='*'){
+                result=a*b;
+
+            }else if(op=='%'){
+                result=a%b;
+            }else{
+                if(b!=0){
+                    result=a/b;
+                }else{
+                    System.out.println("Invalid Input ");
+                }
+            }
+        System.out.println("result is :"+result);
+        }
+
+
+    }
+    
+}
