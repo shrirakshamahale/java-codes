@@ -1,0 +1,10 @@
+public class ReplaceSpaces {
+    public static void main(String[] args) {
+
+        String name = "Harry Potter";
+
+        String result = name.replace(" ", "_");
+
+        System.out.println(result);
+    }
+}
