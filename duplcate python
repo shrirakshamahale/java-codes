@@ -1,0 +1,9 @@
+x = list(map(int, input("Enter the numbers: ").split()))
+
+visited = []
+
+for nums in x:
+    if nums in visited:
+        print("Duplicate:", nums)
+    else:
+        visited.append(nums)
