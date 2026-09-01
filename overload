@@ -1,0 +1,9 @@
+public class overload {
+    static void telljoke(){
+        System.out.println("the laugh is at plagerism ");
+    }
+    public static void main(String[] args) {
+        telljoke();
+        
+    }
+}
