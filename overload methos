@@ -1,0 +1,12 @@
+public class parameter {
+    static int sum1(int a,int b){
+        int c=a+b;
+        return c;
+}
+public static void main(String[] args) {
+    parameter obj=new parameter();
+    int result = obj.sum1(10,20);
+    System.out.println(result);
+}
+}
+
